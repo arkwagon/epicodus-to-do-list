@@ -1,4 +1,7 @@
-// Example document ready function and form submit function w/ event handler to prevent default
+function ItemToDo(title,description) {
+  this.title = title;
+  this.description = description;
+}
 
 $(document).ready(function() {
 
