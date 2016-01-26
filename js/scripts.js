@@ -12,7 +12,13 @@ $(document).ready(function() {
       if (inputtedTitle === "") {
         alert("Please fill out the form correctly!");
       } else {
-        $("ol#toDoCol").append("<li><span class='item'>" + newItemToDo.title + " " + newItemToDo.description+ "</span></li>");
+        $("ol#toDoCol").append("<li><span class='item'>" + "<strong>" + newItemToDo.title + "</strong> " + newItemToDo.description+ " " + "</span></li>");
+
+        $(".item").last().click(function() {
+          $("ol#completed").append("<li><span class='complete'>" + "<strong>" + newItemToDo.title + "</strong></span></li>");
+        });
+
+
 
 
         $("input#new-title").val("");
